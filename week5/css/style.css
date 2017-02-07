@@ -1,0 +1,47 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    border: 1px solid black;
+    display: block;
+    width: 100px;
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Comic Sans MS";
+}
+
+li {
+    float: left;
+}
+
+ul ul li {
+    float: none;
+}
+
+li:hover > a {
+    background-color: red;
+
+}
+
+ul ul {
+    display: none;
+}
+
+li:hover > ul {
+    display: block;
+}
+
+ul ul li {
+    position: relative;
+}
+
+ul ul ul {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+}
