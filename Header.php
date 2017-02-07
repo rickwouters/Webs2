@@ -1,5 +1,6 @@
 <html>
 
+	<div>
 	<link rel="stylesheet" href="css/HeaderStyle.css"/>
 
 	<a href="Home.php">
@@ -22,6 +23,6 @@
 		</a>
 	
 	</ul>
-
+	</div>
 
 </html>
