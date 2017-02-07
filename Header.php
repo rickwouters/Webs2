@@ -9,17 +9,13 @@
 	</a>
 
 	<ul>
-		<a href="Product.php">
-			<li>
-				Producten
-			</li>
-		</a>
+		<li onclick="location.href='Product.php';">
+			Producten
+		</li>
 		
-		<a href="About.php">
-			<li>
-				Over ons
-			</li>
-		</a>
+		<li onclick="location.href='About.php';">
+			Over ons
+		</li>
 	
 	</ul>
 
