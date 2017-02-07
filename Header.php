@@ -1,6 +1,8 @@
 <html>
 
-	<link rel="stylesheet" href="css/HeaderStyle.css"/>
+	<head>
+		<link rel="stylesheet" href="css/HeaderStyle.css"/>
+	</head>
 
 	<a href="Home.php">
 	
@@ -9,7 +11,7 @@
 	</a>
 
 	<ul>
-		<li onclick="location.href='Product.php';">
+		<li onclick="location.href='Product.php';" target="_parent">
 			Producten
 		</li>
 		
@@ -18,6 +20,5 @@
 		</li>
 	
 	</ul>
-
 
 </html>
