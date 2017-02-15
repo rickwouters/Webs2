@@ -1,7 +1,7 @@
 li {
     border: 1px solid black;
     display: block;
-    width: 500px;
+    width: 34%;
     background-color: darkred;
     color: white;
     padding: 10px;
@@ -9,6 +9,7 @@ li {
     float: left;
 }
 ul{
+	width: 70%;
 	float: right;
 }
 img {
