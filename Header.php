@@ -23,10 +23,10 @@
 
 	<p>
 	<?php
-		echo "\n\n\n\n\n";
 		$crumbs = explode("/",$_SERVER["REQUEST_URI"]);
 		foreach($crumbs as $crumb){
-			echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . ' ');
+			echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . '');
+			if ($crumb != $crumbs[0] && $crumb != end($crumbs)) {echo " > ";}
 		}
 	?>
 	</p>

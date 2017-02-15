@@ -1,11 +1,9 @@
 <html>
-	<script src="http://www.w3schools.com/lib/w3data.js"></script>
 	<head>
 		<title>Winkelnaam - About</title>
 	</head>
 	<body>
-		<div w3-include-html="Header.php"></div>
-		<script>w3IncludeHTML();</script>
+		<?php include 'Header.php';?>
 		<link rel="stylesheet" href="css/AboutStyle.css"/>
 
 		<h1>Over deze winkel</h1>
