@@ -2,25 +2,49 @@
 	<script src="http://www.w3schools.com/lib/w3data.js"></script>
 	<head>
 		<title>Winkelnaam - Home</title>
+		
+		<link rel="stylesheet" href="css/HomeStyle.css"/>
+		
 	</head>
 	<body>
-		<div w3-include-html="Header.php"></div>
-		<script>w3IncludeHTML();</script>
+<!-- 		<div w3-include-html="Header.php"></div> <script>w3IncludeHTML();</script>
+-->
 
+		<?php 
+		include 'Header.php';
+		?>
+		
 		<h1>Aanbiedingen bij boekenwinkel</h1>
 		
-		<div>
-			<p><img src="https://www.fredsbouwtekeningen.nl/wp-content/uploads/2014/09/Boekenkast-maken.png" height="350" width="233"></p>
-			<h2>Alle boeken die we hebben</h2>
-			<h3>€0,99</h3>
-			<p>Lorem ipsum dolor sit amet blah blah blah (omschrijving)</p>
-		</div>
+		<div id="ProductShowcase">
 		
-		<div>
-			<p><img src="http://www.politicalgarbagechute.com/wp-content/uploads/2014/04/magic-book-burning-247.jpg" height="120" width="192"></p>
-			<h2>Brandwonden</h2>
-			<h3>€0,99</h3>
-			<p>Lorem ipsum dolor sit amet blah blah blah (omschrijving)</p>
+			<?php 
+			
+				include 'ClassFiles/database.inc.php';
+				
+				$result = sendQuery("SELECT * FROM products LIMIT 2");
+				
+				echo "<table cellpadding=\"2\" border=\"1\" id=\"ProductTable\">";
+				echo "<tr>";
+				while ($row = mysqli_fetch_array($result)){
+					
+					
+					
+					$title = $row["title"];
+				
+					$shortDescritpion = $row["description"];
+					
+					echo "<td width=\"50%\">$title</br>$shortDescritpion</td>";
+					
+					
+					
+					
+				}
+				echo"</tr>";
+				echo "</table>";
+			
+			?>
+		
 		</div>
 
 	</body>
