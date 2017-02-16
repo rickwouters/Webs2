@@ -1,17 +1,17 @@
 <html>
-	<head>
-		<title>Winkelnaam - Home</title>
-		
-		<link rel="stylesheet" href="css/HomeStyle.css"/>
-		
-	</head>
-	<body>
+<head>
+<title>Winkelnaam - Home</title>
 
-		<?php 
-		include 'Header.php';
-		?>
+<link rel="stylesheet" href="css/productsStyle.css"/>
+
+</head>
+<body>
+
+<?php
+include 'Header.php';
+?>
 		
-		<h1>Aanbiedingen bij boekenwinkel</h1>
+		<h1>Ons assortiment</h1>
 		
 		<div id="ProductShowcase">
 		
@@ -19,13 +19,24 @@
 			
 				include 'ClassFiles/database.inc.php';
 				
-				$result = sendQuery("SELECT * FROM products LIMIT 2");
+				$result = sendQuery("SELECT * FROM products");
 				
 				echo "<table cellpadding=\"2\" border=\"1\" id=\"ProductTable\">";
 				echo "<tr>";
+				
+				$collumNumber = 0;
+				
 				while ($row = mysqli_fetch_array($result)){
 					
-					
+					if($collumNumber == 2){
+						
+						echo "</tr>";
+						echo "<tr>";
+						$collumNumber = 0;
+						
+					}else{
+						$collumNumber++;
+					}
 					
 					$title = $row["title"];
 				
